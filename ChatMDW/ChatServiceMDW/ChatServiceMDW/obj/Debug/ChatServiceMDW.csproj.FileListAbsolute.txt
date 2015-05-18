@@ -1,0 +1,6 @@
+c:\users\ivana\documents\visual studio 2013\Projects\ChatServiceMDW\ChatServiceMDW\bin\Debug\ChatServiceMDW.dll.config
+c:\users\ivana\documents\visual studio 2013\Projects\ChatServiceMDW\ChatServiceMDW\bin\Debug\ChatServiceMDW.dll
+c:\users\ivana\documents\visual studio 2013\Projects\ChatServiceMDW\ChatServiceMDW\bin\Debug\ChatServiceMDW.pdb
+c:\users\ivana\documents\visual studio 2013\Projects\ChatServiceMDW\ChatServiceMDW\obj\Debug\ChatServiceMDW.dll
+c:\users\ivana\documents\visual studio 2013\Projects\ChatServiceMDW\ChatServiceMDW\obj\Debug\ChatServiceMDW.pdb
+C:\Users\ivana\Documents\Visual Studio 2013\Projects\ChatServiceMDW\ChatServiceMDW\obj\Debug\ChatServiceMDW.csprojResolveAssemblyReference.cache

@@ -1,0 +1,9 @@
+c:\users\ivana\documents\visual studio 2013\Projects\ChatClientMDW\ChatClientMDW\bin\Debug\ChatClientMDW.exe.config
+c:\users\ivana\documents\visual studio 2013\Projects\ChatClientMDW\ChatClientMDW\obj\Debug\ChatClientMDW.Form1.resources
+c:\users\ivana\documents\visual studio 2013\Projects\ChatClientMDW\ChatClientMDW\obj\Debug\ChatClientMDW.LogIn.resources
+c:\users\ivana\documents\visual studio 2013\Projects\ChatClientMDW\ChatClientMDW\obj\Debug\ChatClientMDW.Properties.Resources.resources
+c:\users\ivana\documents\visual studio 2013\Projects\ChatClientMDW\ChatClientMDW\obj\Debug\ChatClientMDW.csproj.GenerateResource.Cache
+c:\users\ivana\documents\visual studio 2013\Projects\ChatClientMDW\ChatClientMDW\bin\Debug\ChatClientMDW.exe
+c:\users\ivana\documents\visual studio 2013\Projects\ChatClientMDW\ChatClientMDW\bin\Debug\ChatClientMDW.pdb
+c:\users\ivana\documents\visual studio 2013\Projects\ChatClientMDW\ChatClientMDW\obj\Debug\ChatClientMDW.exe
+c:\users\ivana\documents\visual studio 2013\Projects\ChatClientMDW\ChatClientMDW\obj\Debug\ChatClientMDW.pdb

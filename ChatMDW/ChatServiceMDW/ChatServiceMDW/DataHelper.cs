@@ -4,50 +4,59 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.OleDb;
+using System.Runtime.Serialization;
+using MySql.Data;
+using MySql.Data.MySqlClient;
 
 
 
 namespace ChatServiceMDW
 {
-    class DataHelper
+    [DataContract]
+    public class DataHelper
     {
-        private OleDbConnection connection;
 
-        //username as a parameter in the constructor
+        string connectionInfo = @"server=athena01.fhict.local;
+                                  userid=dbi290916;
+                                  password=LKnPL35NHl;
+                                  database=dbi290916;
+                                  Convert Zero Datetime = True;
+                                  Allow Zero DateTime = True;";
+        [DataMember]
+        public MySqlConnection connection { get; set; }
+
         public DataHelper()
         {
-            //this is for access to an ACCESS databse
-            String info = "Provider=Microsoft.ACE.OLEDB.12.0";
-
-            String databaseInfo = "DataSource";
-
-            String connectionInfo = info + ";" + databaseInfo;
-            connection = new OleDbConnection();
+            connection = new MySqlConnection(connectionInfo);
 
         }
+
         public Player isUser(string username, string password)
         {
             Player player = null;
-
-            String sql = "Select statement";
-            OleDbCommand command = new OleDbCommand(sql,connection);
+            string sql = "SELECT password FROM users WHERE name = '" + username + "'";
+            MySqlCommand command = new MySqlCommand(sql,connection);
             try
             {
-                //connection.Open;
-                OleDbDataReader reader = command.ExecuteReader();
+                connection.Open();
+                MySqlDataReader reader = command.ExecuteReader();
+                string pass = "";
+                if (reader.Read())
+                {
+                    pass = Convert.ToString(reader["password"]);
 
-                reader.Read();
-
-
+                    player = new Player(username);
+                }
             }
             catch
             {
-
-
+                
+                throw;
             }
             finally
             {
-                //conection.Close();
+
+                connection.Close();
             }
             return player;
         }

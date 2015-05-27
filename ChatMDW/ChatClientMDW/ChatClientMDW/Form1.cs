@@ -17,6 +17,7 @@ namespace ChatClientMDW
         DateTime dt;
         public string username;
         ChatClient chatProxy;
+        
         public Form1(string username)
         {
             InitializeComponent();

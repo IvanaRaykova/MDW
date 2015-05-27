@@ -25,11 +25,8 @@ namespace ChatServiceMDW
 
        bool ILogin.Login(string username,string pass)
        {
-           //Player player   = datahelper.Isuser(username,password);
-           Player player = new Player("iva");
-           Player playerOne = new Player("toshko");
-           Player playerTwo = new Player("zair");
-
+           Player player = dataHelper.isUser(username,pass);
+         
            if (player != null)
            {
                foreach (Player item in players)

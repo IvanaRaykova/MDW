@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using LudoServer;
 
 namespace LudoServer
 {
@@ -12,19 +13,38 @@ namespace LudoServer
    [ServiceContract(Namespace = "LudoServer", CallbackContract = typeof(IGameCallBack))]
     public interface IGame
     {
+       List<Player> players;
 
-        [OperationContract]
-        string GetData(int value);
+       bool isTurn;
 
-        [OperationContract]
-        CompositeType GetDataUsingDataContract(CompositeType composite);
+       [OperationContract]
+       void RollDie();
 
+       [OperationContract]
+       public void MovePiece();
+       [OperationContract]
+       public void AddMessage(string playername, string message);
+       [OperationContract]
+       public bool Subscribe();
+       [OperationContract]
+       public bool Unsubscribe();
+       [OperationContract]
+       public void Spectate();
         // TODO: Add your service operations here
+
     }
    public interface IGameCallBack
    {
        [OperationContract(IsOneWay = true)]
-       void ProductedShipped(string productName, DateTime ShippingMoment);
+       void OnRollDie(Player player, int dieresult);
+
+       [OperationContract(IsOneWay = true)]
+       void OnPlayerTurn(Player player);
+       [OperationContract(IsOneWay = true)]
+       void OnMovePiece(Player player);
+
+       [OperationContract(IsOneWay = true)]
+       void OnMessageAdded(Player player);
    }
 
    [ServiceBehavior(Namespace = "WebShopService")]

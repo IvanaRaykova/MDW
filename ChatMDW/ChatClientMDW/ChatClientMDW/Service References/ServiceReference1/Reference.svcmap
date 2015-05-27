@@ -27,6 +27,7 @@
     <MetadataFile FileName="LoginContract.wsdl" MetadataType="Wsdl" ID="2b5ab1fa-36d4-4697-a988-076ad03b4e15" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ChatServiceMDW/Service1/mex" />
     <MetadataFile FileName="ChatCallbacks.xsd" MetadataType="Schema" ID="c144ccf4-3d81-4fac-aa99-243e4e960f6d" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ChatServiceMDW/Service1/mex" />
     <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="8f7eb0b7-7487-4ebf-872f-3daa7cfc29c8" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ChatServiceMDW/Service1/mex" />
+    <MetadataFile FileName="ChatServiceMDW.xsd" MetadataType="Schema" ID="51eae599-2622-4350-9b09-518e12a61668" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ChatServiceMDW/Service1/mex" />
     <MetadataFile FileName="LoginContract.xsd" MetadataType="Schema" ID="9ca40ff1-39e6-4971-a982-586ec3ae4245" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ChatServiceMDW/Service1/mex" />
   </Metadata>
   <Extensions>

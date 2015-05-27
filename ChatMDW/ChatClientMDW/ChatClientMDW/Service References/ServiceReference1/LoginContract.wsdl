@@ -5,6 +5,7 @@
       <xsd:import namespace="LoginContract" />
       <xsd:import namespace="ChatCallbacks" />
       <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ChatServiceMDW" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="ILogin_Login_InputMessage">

@@ -14,5 +14,10 @@ namespace ChatServiceMDW
         [OperationContract(IsOneWay = true)]
 
         void onMessageAdded(DateTime timestamp, string playerName, string message);
+
+        [OperationContract(IsOneWay = true)]
+        void OnOnline(string username);
+
+
     }
 }

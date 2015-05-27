@@ -9,7 +9,54 @@
 //------------------------------------------------------------------------------
 
 namespace ChatClientMDW.ServiceReference1 {
+    using System.Runtime.Serialization;
+    using System;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Player", Namespace="http://schemas.datacontract.org/2004/07/ChatServiceMDW")]
+    [System.SerializableAttribute()]
+    public partial class Player : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string nameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nameField, value) != true)) {
+                    this.nameField = value;
+                    this.RaisePropertyChanged("name");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="ChatCallbacks", ConfigurationName="ServiceReference1.IChat", CallbackContract=typeof(ChatClientMDW.ServiceReference1.IChatCallback))]
@@ -32,6 +79,24 @@ namespace ChatClientMDW.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="ChatCallbacks/IChat/UnSubscribe", ReplyAction="ChatCallbacks/IChat/UnSubscribeResponse")]
         System.Threading.Tasks.Task<bool> UnSubscribeAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="ChatCallbacks/IChat/GetOnlinePlayers", ReplyAction="ChatCallbacks/IChat/GetOnlinePlayersResponse")]
+        ChatClientMDW.ServiceReference1.Player[] GetOnlinePlayers();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="ChatCallbacks/IChat/GetOnlinePlayers", ReplyAction="ChatCallbacks/IChat/GetOnlinePlayersResponse")]
+        System.Threading.Tasks.Task<ChatClientMDW.ServiceReference1.Player[]> GetOnlinePlayersAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="ChatCallbacks/IChat/PrivateSubscribe", ReplyAction="ChatCallbacks/IChat/PrivateSubscribeResponse")]
+        bool PrivateSubscribe();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="ChatCallbacks/IChat/PrivateSubscribe", ReplyAction="ChatCallbacks/IChat/PrivateSubscribeResponse")]
+        System.Threading.Tasks.Task<bool> PrivateSubscribeAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="ChatCallbacks/IChat/AddPrivateMessage", ReplyAction="ChatCallbacks/IChat/AddPrivateMessageResponse")]
+        void AddPrivateMessage(string playerName, string message);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="ChatCallbacks/IChat/AddPrivateMessage", ReplyAction="ChatCallbacks/IChat/AddPrivateMessageResponse")]
+        System.Threading.Tasks.Task AddPrivateMessageAsync(string playerName, string message);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -39,6 +104,9 @@ namespace ChatClientMDW.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="ChatCallbacks/IChat/onMessageAdded")]
         void onMessageAdded(System.DateTime timestamp, string playerName, string message);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="ChatCallbacks/IChat/OnOnline")]
+        void OnOnline(string username);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -91,6 +159,30 @@ namespace ChatClientMDW.ServiceReference1 {
         
         public System.Threading.Tasks.Task<bool> UnSubscribeAsync() {
             return base.Channel.UnSubscribeAsync();
+        }
+        
+        public ChatClientMDW.ServiceReference1.Player[] GetOnlinePlayers() {
+            return base.Channel.GetOnlinePlayers();
+        }
+        
+        public System.Threading.Tasks.Task<ChatClientMDW.ServiceReference1.Player[]> GetOnlinePlayersAsync() {
+            return base.Channel.GetOnlinePlayersAsync();
+        }
+        
+        public bool PrivateSubscribe() {
+            return base.Channel.PrivateSubscribe();
+        }
+        
+        public System.Threading.Tasks.Task<bool> PrivateSubscribeAsync() {
+            return base.Channel.PrivateSubscribeAsync();
+        }
+        
+        public void AddPrivateMessage(string playerName, string message) {
+            base.Channel.AddPrivateMessage(playerName, message);
+        }
+        
+        public System.Threading.Tasks.Task AddPrivateMessageAsync(string playerName, string message) {
+            return base.Channel.AddPrivateMessageAsync(playerName, message);
         }
     }
     

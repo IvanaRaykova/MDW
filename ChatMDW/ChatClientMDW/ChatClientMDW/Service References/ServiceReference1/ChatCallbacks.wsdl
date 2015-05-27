@@ -4,6 +4,7 @@
     <xsd:schema targetNamespace="ChatCallbacks/Imports">
       <xsd:import namespace="ChatCallbacks" />
       <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ChatServiceMDW" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IChat_AddMessage_InputMessage">
@@ -24,8 +25,29 @@
   <wsdl:message name="IChat_UnSubscribe_OutputMessage">
     <wsdl:part name="parameters" element="tns:UnSubscribeResponse" />
   </wsdl:message>
+  <wsdl:message name="IChat_GetOnlinePlayers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOnlinePlayers" />
+  </wsdl:message>
+  <wsdl:message name="IChat_GetOnlinePlayers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOnlinePlayersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChat_PrivateSubscribe_InputMessage">
+    <wsdl:part name="parameters" element="tns:PrivateSubscribe" />
+  </wsdl:message>
+  <wsdl:message name="IChat_PrivateSubscribe_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PrivateSubscribeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChat_AddPrivateMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPrivateMessage" />
+  </wsdl:message>
+  <wsdl:message name="IChat_AddPrivateMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPrivateMessageResponse" />
+  </wsdl:message>
   <wsdl:message name="IChat_onMessageAdded_OutputCallbackMessage">
     <wsdl:part name="parameters" element="tns:onMessageAdded" />
+  </wsdl:message>
+  <wsdl:message name="IChat_OnOnline_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:OnOnline" />
   </wsdl:message>
   <wsdl:portType name="IChat">
     <wsdl:operation name="AddMessage">
@@ -40,8 +62,23 @@
       <wsdl:input wsaw:Action="ChatCallbacks/IChat/UnSubscribe" message="tns:IChat_UnSubscribe_InputMessage" />
       <wsdl:output wsaw:Action="ChatCallbacks/IChat/UnSubscribeResponse" message="tns:IChat_UnSubscribe_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="GetOnlinePlayers">
+      <wsdl:input wsaw:Action="ChatCallbacks/IChat/GetOnlinePlayers" message="tns:IChat_GetOnlinePlayers_InputMessage" />
+      <wsdl:output wsaw:Action="ChatCallbacks/IChat/GetOnlinePlayersResponse" message="tns:IChat_GetOnlinePlayers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PrivateSubscribe">
+      <wsdl:input wsaw:Action="ChatCallbacks/IChat/PrivateSubscribe" message="tns:IChat_PrivateSubscribe_InputMessage" />
+      <wsdl:output wsaw:Action="ChatCallbacks/IChat/PrivateSubscribeResponse" message="tns:IChat_PrivateSubscribe_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPrivateMessage">
+      <wsdl:input wsaw:Action="ChatCallbacks/IChat/AddPrivateMessage" message="tns:IChat_AddPrivateMessage_InputMessage" />
+      <wsdl:output wsaw:Action="ChatCallbacks/IChat/AddPrivateMessageResponse" message="tns:IChat_AddPrivateMessage_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="onMessageAdded">
       <wsdl:output wsaw:Action="ChatCallbacks/IChat/onMessageAdded" message="tns:IChat_onMessageAdded_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OnOnline">
+      <wsdl:output wsaw:Action="ChatCallbacks/IChat/OnOnline" message="tns:IChat_OnOnline_OutputCallbackMessage" />
     </wsdl:operation>
   </wsdl:portType>
 </wsdl:definitions>

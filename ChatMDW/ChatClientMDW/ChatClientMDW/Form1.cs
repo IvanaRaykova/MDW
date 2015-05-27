@@ -28,6 +28,13 @@ namespace ChatClientMDW
             this.username = username;
             label1.Text = "Hello" + username;
             chatProxy.Subscribe();
+           
+            foreach (var player in chatProxy.GetOnlinePlayers())
+            {
+                listBox2.Items.Add(player.name);
+            }
+            
+            
         }
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -38,7 +45,7 @@ namespace ChatClientMDW
         {
             listBox1.Items.Add(timestamp + ":" + playerName + ">" + message);
         }
-
+       
         private void button1_Click(object sender, EventArgs e)
         {
             string message = textBox1.Text;
@@ -48,6 +55,22 @@ namespace ChatClientMDW
 
             chatProxy.AddMessageAsync(username, message);
         }
-        
+
+
+
+
+
+        public void OnOnline(string username)
+        {
+            listBox2.Items.Add(username);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new PrivateChat().Show();
+
+            chatProxy.PrivateSubscribe();
+        }
     }
 }

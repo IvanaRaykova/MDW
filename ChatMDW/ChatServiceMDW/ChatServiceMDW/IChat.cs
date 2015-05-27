@@ -13,13 +13,22 @@ namespace ChatServiceMDW
     {
         [OperationContract]
         void AddMessage(string playerName, string message);
-
-        
         [OperationContract]
         bool Subscribe();
 
         [OperationContract]
         bool UnSubscribe();
+
+        [OperationContract]
+        List<Player> GetOnlinePlayers();
+
+        [OperationContract]
+        bool PrivateSubscribe();
+
+        [OperationContract]
+        void AddPrivateMessage(string playerName, string message);
+
+
     }
 
 }

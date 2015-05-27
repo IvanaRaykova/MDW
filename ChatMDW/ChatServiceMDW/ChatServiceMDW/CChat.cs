@@ -15,7 +15,7 @@ namespace ChatServiceMDW
        DataHelper dataHelper;
        private List<Player> players;
        private static readonly List<IChatCallback> subscribers = new List<IChatCallback>();
-
+       private static readonly List<IChatCallback> privareSubscribers = new List<IChatCallback>();
 
        public CChat()
        {
@@ -37,11 +37,13 @@ namespace ChatServiceMDW
                    }
                }
                players.Add(player);
+               FireEvent(player.name);
                return true;
            }
            return false;
 
        }
+     
        bool IChat.Subscribe()
        {
            try
@@ -79,6 +81,7 @@ namespace ChatServiceMDW
                if (((ICommunicationObject)callback).State == CommunicationState.Opened)
                {
                    callback.onMessageAdded(DateTime.Now, playerName, message);
+                   
                }
                else
                {
@@ -92,6 +95,62 @@ namespace ChatServiceMDW
        public void Register(string username, string password)
        {
            dataHelper.RegisterPlayer(username,password);
+       }
+
+
+       public List<Player> GetOnlinePlayers()
+       {
+           return players;
+       }
+
+       public void FireEvent(string playerName)
+       {
+           subscribers.ForEach(delegate(IChatCallback callback)
+           {
+               if (((ICommunicationObject)callback).State == CommunicationState.Opened)
+               {
+                   callback.OnOnline(playerName);
+
+               }
+               else
+               {
+                   subscribers.Remove(callback);
+               }
+           });
+
+       }
+       public bool PrivateSubscribe()
+       {
+           try
+           {
+               IChatCallback chatCallBack = OperationContext.Current.GetCallbackChannel<IChatCallback>();
+               if (!privareSubscribers.Contains(chatCallBack))
+                   privareSubscribers.Add(chatCallBack);
+               return true;
+
+           }
+           catch
+           {
+               return false;
+           }
+       }
+
+
+       public void AddPrivateMessage(string playerName, string message)
+       {
+
+           privareSubscribers.ForEach(delegate(IChatCallback callback)
+           {
+               if (((ICommunicationObject)callback).State == CommunicationState.Opened)
+               {
+                   callback.onMessageAdded(DateTime.Now, playerName, message);
+
+               }
+               else
+               {
+                   privareSubscribers.Remove(callback);
+               }
+           });
        }
     }
 }

@@ -13,10 +13,20 @@
   <wsdl:message name="ILogin_Login_OutputMessage">
     <wsdl:part name="parameters" element="tns:LoginResponse" />
   </wsdl:message>
+  <wsdl:message name="ILogin_Register_InputMessage">
+    <wsdl:part name="parameters" element="tns:Register" />
+  </wsdl:message>
+  <wsdl:message name="ILogin_Register_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterResponse" />
+  </wsdl:message>
   <wsdl:portType name="ILogin">
     <wsdl:operation name="Login">
       <wsdl:input wsaw:Action="LoginContract/ILogin/Login" message="tns:ILogin_Login_InputMessage" />
       <wsdl:output wsaw:Action="LoginContract/ILogin/LoginResponse" message="tns:ILogin_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Register">
+      <wsdl:input wsaw:Action="LoginContract/ILogin/Register" message="tns:ILogin_Register_InputMessage" />
+      <wsdl:output wsaw:Action="LoginContract/ILogin/RegisterResponse" message="tns:ILogin_Register_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
 </wsdl:definitions>

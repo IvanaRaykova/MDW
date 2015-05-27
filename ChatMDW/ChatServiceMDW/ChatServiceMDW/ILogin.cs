@@ -13,5 +13,8 @@ namespace ChatServiceMDW
     {
         [OperationContract]
         bool Login(string username, string password);
+
+        [OperationContract]
+        void Register(string username,string password);
     }
 }

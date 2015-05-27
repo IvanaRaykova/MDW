@@ -18,8 +18,8 @@ namespace ChatClientMDW
         public LogIn()
         {
             InitializeComponent();
-            textBox1.Text = "username";
-            textBox2.Text = "password";
+            //textBox1.Text = "username";
+            //textBox2.Text = "password";
 
             proxy = new LoginClient();
 
@@ -38,6 +38,18 @@ namespace ChatClientMDW
             }
             else
             {
+                const string message = "There is no such a user?";
+                const string caption = "Form Closing";
+                var result = MessageBox.Show(message,caption,MessageBoxButtons.YesNo);
+
+                if (result == DialogResult.Yes)
+                {
+                    proxy.Register(username,password);
+                    label3.Text = "u have been registered";
+                    
+                }
+               
+                
                 label3.Visible = true;
                 textBox1.Text = "";
                 textBox2.Text = "";

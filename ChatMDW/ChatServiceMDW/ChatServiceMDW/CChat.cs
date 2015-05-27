@@ -87,5 +87,11 @@ namespace ChatServiceMDW
            });
 
        }
-      }
+
+
+       public void Register(string username, string password)
+       {
+           dataHelper.RegisterPlayer(username,password);
+       }
+    }
 }

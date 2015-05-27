@@ -7,7 +7,6 @@ C:\Users\ivana\Documents\Visual Studio 2013\Projects\ChatServiceMDW\ChatServiceM
 C:\Users\ivana\Documents\GitHub\MDW\ChatMDW\ChatServiceMDW\ChatServiceMDW\bin\Debug\ChatServiceMDW.dll.config
 C:\Users\ivana\Documents\GitHub\MDW\ChatMDW\ChatServiceMDW\ChatServiceMDW\bin\Debug\ChatServiceMDW.dll
 C:\Users\ivana\Documents\GitHub\MDW\ChatMDW\ChatServiceMDW\ChatServiceMDW\bin\Debug\ChatServiceMDW.pdb
-C:\Users\ivana\Documents\GitHub\MDW\ChatMDW\ChatServiceMDW\ChatServiceMDW\obj\Debug\ChatServiceMDW.csprojResolveAssemblyReference.cache
 C:\Users\ivana\Documents\GitHub\MDW\ChatMDW\ChatServiceMDW\ChatServiceMDW\obj\Debug\ChatServiceMDW.dll
 C:\Users\ivana\Documents\GitHub\MDW\ChatMDW\ChatServiceMDW\ChatServiceMDW\obj\Debug\ChatServiceMDW.pdb
 C:\Users\ivana\Desktop\MDW\ChatServiceMDW\ChatServiceMDW\obj\Debug\ChatServiceMDW.csprojResolveAssemblyReference.cache

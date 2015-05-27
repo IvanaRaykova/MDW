@@ -103,6 +103,12 @@ namespace ChatClientMDW.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="LoginContract/ILogin/Login", ReplyAction="LoginContract/ILogin/LoginResponse")]
         System.Threading.Tasks.Task<bool> LoginAsync(string username, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="LoginContract/ILogin/Register", ReplyAction="LoginContract/ILogin/RegisterResponse")]
+        void Register(string username, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="LoginContract/ILogin/Register", ReplyAction="LoginContract/ILogin/RegisterResponse")]
+        System.Threading.Tasks.Task RegisterAsync(string username, string password);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -138,6 +144,14 @@ namespace ChatClientMDW.ServiceReference1 {
         
         public System.Threading.Tasks.Task<bool> LoginAsync(string username, string password) {
             return base.Channel.LoginAsync(username, password);
+        }
+        
+        public void Register(string username, string password) {
+            base.Channel.Register(username, password);
+        }
+        
+        public System.Threading.Tasks.Task RegisterAsync(string username, string password) {
+            return base.Channel.RegisterAsync(username, password);
         }
     }
 }

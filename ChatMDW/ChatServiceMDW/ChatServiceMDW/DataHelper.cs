@@ -60,6 +60,27 @@ namespace ChatServiceMDW
             }
             return player;
         }
+        public void RegisterPlayer(string username,string password)
+        {
+          
+           string sql =  "INSERT INTO users (name,password) VALUES ('" + username + "','" +  password + "')";
+           
 
+            MySqlCommand command = new MySqlCommand(sql,connection);
+            try
+            {
+                connection.Open();
+                command.ExecuteReader();
+            }
+            catch
+            {
+
+                throw;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
     }
 }

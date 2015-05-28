@@ -27,3 +27,4 @@ C:\Users\ivana\Desktop\MDW\ChatClientMDW\ChatClientMDW\obj\Debug\ChatClientMDW.L
 C:\Users\ivana\Desktop\MDW\ChatClientMDW\ChatClientMDW\obj\Debug\ChatClientMDW.Properties.Resources.resources
 C:\Users\ivana\Desktop\MDW\ChatClientMDW\ChatClientMDW\obj\Debug\ChatClientMDW.csproj.GenerateResource.Cache
 C:\Users\ivana\Documents\GitHub\MDW\ChatMDW\ChatClientMDW\ChatClientMDW\obj\Debug\ChatClientMDW.PrivateChat.resources
+C:\Users\ivana\Documents\GitHub\MDW\ChatMDW\ChatClientMDW\ChatClientMDW\obj\Debug\ChatClientMDW.csprojResolveAssemblyReference.cache

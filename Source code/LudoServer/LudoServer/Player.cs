@@ -9,20 +9,17 @@ namespace LudoServer
     [DataContract]
     public class Player
     {
-                [DataMember]
-                private string username;
-                private string password;
-                [DataMember]
-                private string firstname;
-                [DataMember]
-                private int nrofWins;
+        [DataMember]
+         public string name;
+
+        public ILobbyCallBack lobbycallback; 
+         
+         [DataMember]
+         private int nrofWins;
             
-            public Player(string username, string password, string firstname)
-            { 
-                this.username = username;
-               this.password = password;
-                this.firstname = firstname;
-                this.nrofWins = 0;
+            public Player(string name)
+            {
+                this.name = name;
             }
 
     }

@@ -13,23 +13,21 @@ namespace LudoServer
    [ServiceContract(Namespace = "LudoServer", CallbackContract = typeof(IGameCallBack))]
     public interface IGame
     {
-       List<Player> players;
-
-       bool isTurn;
+       
 
        [OperationContract]
        void RollDie();
 
        [OperationContract]
-       public void MovePiece();
+        void MovePiece();
        [OperationContract]
-       public void AddMessage(string playername, string message);
+       void AddMessage(string playername, string message);
        [OperationContract]
-       public bool Subscribe();
+        bool Subscribe();
        [OperationContract]
-       public bool Unsubscribe();
+        bool Unsubscribe();
        [OperationContract]
-       public void Spectate();
+        void Spectate();
         // TODO: Add your service operations here
 
     }

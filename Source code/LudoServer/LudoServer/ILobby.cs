@@ -15,9 +15,7 @@ namespace LudoServer
    public interface ILobby
     {
        
-        private bool isReady;
-        private Color Color;
-        private List<Game> games;
+        
         
         [OperationContract]
         void AddMessage(string playerName, string message);
@@ -38,25 +36,25 @@ namespace LudoServer
         void AddMessageGame(string playerName, string message);
                 
         [OperationContract]
-        public bool Login(string username, string password);
+         bool Login(string username, string password);
         
         [OperationContract]
-        public void Register(string username, string password);
+        void Register(string username, string password);
         
         [OperationContract]
-        public void NewGame();
+         void NewGame();
        
         [OperationContract]
-        public void InvitePlayer(Player player);
+         void InvitePlayer(Player player);
        
         [OperationContract]
-        public void JoinGame(Game game);
+         void JoinGame(Game game);
         
         [OperationContract]
-        public void setColor(Player player);
+       void setColor(Player player);
         
         [OperationContract]
-        public void Ready();
+         void Ready();
 
 
     }
@@ -70,16 +68,16 @@ namespace LudoServer
         void OnOnline(string username);
         
         [OperationContract(IsOneWay = true)]
-        public void OnInvited(Player player);
+         void OnInvited(Player player);
         
         [OperationContract(IsOneWay = true)]
-        public void OnReady();
+         void OnReady();
         
         [OperationContract(IsOneWay = true)]
-        public void OnGameStarted();
+         void OnGameStarted();
         
         [OperationContract(IsOneWay = true)]
-        public void OnColorSet(Color color);
+         void OnColorSet(Color color);
         
     }
 }

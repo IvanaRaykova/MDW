@@ -45,6 +45,7 @@ namespace LudoServer
         public Square Square
         {
             get { return this.square; }
+            set { this.square = value; }
 
         }
 

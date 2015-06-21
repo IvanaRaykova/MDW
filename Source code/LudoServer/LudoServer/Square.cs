@@ -64,6 +64,20 @@ namespace LudoServer
 
         }
 
+        public void RemovePiece(Piece Piece)
+        {
+            pieces.Remove(Piece);
+            if (pieces.Count == 0)
+            {
+                isemptysquare = true;
+                ismultiple = false;
+            }
+            if (pieces.Count == 1)
+            {
+                ismultiple = false;
+            }
+        }
+
         public Square(Color color, int number, bool isHouse, bool isGoal)
         {
             this.color = color;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Runtime.Serialization;
+using System.Drawing;
 
 namespace LudoServer
 {
@@ -12,14 +13,15 @@ namespace LudoServer
         [DataMember]
          public string name;
 
-        public ILobbyCallBack lobbycallback; 
-         
-         [DataMember]
-         private int nrofWins;
-            
-            public Player(string name)
+        [DataMember]
+        public Color color;
+
+        public IGameCallBack lobbycallback; 
+        
+            public Player(string name, Color color)
             {
                 this.name = name;
+                this.color = color;
             }
 
     }

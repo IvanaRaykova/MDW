@@ -1,2 +1,15 @@
 J:\MDW\Source code\Ludo_Client\Ludo_Client\bin\Debug\Ludo_Client.exe.config
 C:\Users\Raxiz\Pictures\Books\year 2\block 4\mdw\MDW\Source code\Ludo_Client\Ludo_Client\bin\Debug\Ludo_Client.exe.config
+C:\Users\Raxiz\Pictures\Books\year 2\block 4\mdw\MDW\Source code\Ludo_Client\Ludo_Client\bin\Debug\Ludo_Client.exe
+C:\Users\Raxiz\Pictures\Books\year 2\block 4\mdw\MDW\Source code\Ludo_Client\Ludo_Client\bin\Debug\Ludo_Client.pdb
+C:\Users\Raxiz\Pictures\Books\year 2\block 4\mdw\MDW\Source code\Ludo_Client\Ludo_Client\obj\Debug\Ludo_Client.csprojResolveAssemblyReference.cache
+C:\Users\Raxiz\Pictures\Books\year 2\block 4\mdw\MDW\Source code\Ludo_Client\Ludo_Client\obj\Debug\Ludo_Client.LogIn.resources
+C:\Users\Raxiz\Pictures\Books\year 2\block 4\mdw\MDW\Source code\Ludo_Client\Ludo_Client\obj\Debug\Ludo_Client.Game.resources
+C:\Users\Raxiz\Pictures\Books\year 2\block 4\mdw\MDW\Source code\Ludo_Client\Ludo_Client\obj\Debug\Ludo_Client.GameCreator.resources
+C:\Users\Raxiz\Pictures\Books\year 2\block 4\mdw\MDW\Source code\Ludo_Client\Ludo_Client\obj\Debug\Ludo_Client.Guest.resources
+C:\Users\Raxiz\Pictures\Books\year 2\block 4\mdw\MDW\Source code\Ludo_Client\Ludo_Client\obj\Debug\Ludo_Client.Lobby.resources
+C:\Users\Raxiz\Pictures\Books\year 2\block 4\mdw\MDW\Source code\Ludo_Client\Ludo_Client\obj\Debug\Ludo_Client.Properties.Resources.resources
+C:\Users\Raxiz\Pictures\Books\year 2\block 4\mdw\MDW\Source code\Ludo_Client\Ludo_Client\obj\Debug\Ludo_Client.RegisterForm.resources
+C:\Users\Raxiz\Pictures\Books\year 2\block 4\mdw\MDW\Source code\Ludo_Client\Ludo_Client\obj\Debug\Ludo_Client.csproj.GenerateResource.Cache
+C:\Users\Raxiz\Pictures\Books\year 2\block 4\mdw\MDW\Source code\Ludo_Client\Ludo_Client\obj\Debug\Ludo_Client.exe
+C:\Users\Raxiz\Pictures\Books\year 2\block 4\mdw\MDW\Source code\Ludo_Client\Ludo_Client\obj\Debug\Ludo_Client.pdb

@@ -98,9 +98,9 @@ namespace LudoServer
        }
 
 
-       public List<User> GetOnlineUsers()
-       {
-           return users;
+      public List<User> GetOnlineUsers()
+      {
+         return users;
        }
 
        public void FireEvent(string playerName)
@@ -119,39 +119,10 @@ namespace LudoServer
            });
 
        }
-       public bool PrivateSubscribe()
-       {
-           try
-           {
-               ILobbyCallback chatCallBack = OperationContext.Current.GetCallbackChannel<ILobbyCallback>();
-               if (!privateSubscribers.Contains(chatCallBack))
-                   privateSubscribers.Add(chatCallBack);
-               return true;
-
-           }
-           catch
-           {
-               return false;
-           }
-       }
+    
 
 
-       public void AddPrivateMessage(string playerName, string message)
-       {
-
-           privateSubscribers.ForEach(delegate(ILobbyCallback callback)
-           {
-               if (((ICommunicationObject)callback).State == CommunicationState.Opened)
-               {
-                   callback.onMessageAdded(DateTime.Now, playerName, message);
-
-               }
-               else
-               {
-                   privateSubscribers.Remove(callback);
-               }
-           });
-       }
+      
     }
 
 }

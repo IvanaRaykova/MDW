@@ -30,6 +30,7 @@ namespace Ludo_Client
         {
             this.Focus();
         }
+       
 
         public void onMessageAdded(DateTime timestamp, string playerName, string message)
         {

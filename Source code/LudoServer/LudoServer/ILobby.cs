@@ -19,10 +19,7 @@ namespace LudoServer
         bool UnSubscribe();
 
         [OperationContract]
-        List<User> GetOnlineUsers();
-
-        [OperationContract]
-        bool PrivateSubscribe();
+        List<User> GetOnline();
 
         [OperationContract]
         void AddPrivateMessage(string playerName, string message);

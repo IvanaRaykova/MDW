@@ -4,3 +4,9 @@ C:\Users\Raxiz\Documents\Visual Studio 2012\Projects\CSA\LudoServer\LudoServer\b
 C:\Users\Raxiz\Documents\Visual Studio 2012\Projects\CSA\LudoServer\LudoServer\bin\Debug\LudoServer.pdb
 C:\Users\Raxiz\Documents\Visual Studio 2012\Projects\CSA\LudoServer\LudoServer\obj\Debug\LudoServer.dll
 C:\Users\Raxiz\Documents\Visual Studio 2012\Projects\CSA\LudoServer\LudoServer\obj\Debug\LudoServer.pdb
+C:\Users\Raxiz\Pictures\Books\year 2\block 4\mdw\MDW\Source code\LudoServer\LudoServer\bin\Debug\LudoServer.dll.config
+C:\Users\Raxiz\Pictures\Books\year 2\block 4\mdw\MDW\Source code\LudoServer\LudoServer\bin\Debug\LudoServer.dll
+C:\Users\Raxiz\Pictures\Books\year 2\block 4\mdw\MDW\Source code\LudoServer\LudoServer\bin\Debug\LudoServer.pdb
+C:\Users\Raxiz\Pictures\Books\year 2\block 4\mdw\MDW\Source code\LudoServer\LudoServer\obj\Debug\LudoService.csprojResolveAssemblyReference.cache
+C:\Users\Raxiz\Pictures\Books\year 2\block 4\mdw\MDW\Source code\LudoServer\LudoServer\obj\Debug\LudoServer.dll
+C:\Users\Raxiz\Pictures\Books\year 2\block 4\mdw\MDW\Source code\LudoServer\LudoServer\obj\Debug\LudoServer.pdb

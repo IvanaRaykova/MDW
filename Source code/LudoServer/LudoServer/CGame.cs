@@ -338,7 +338,7 @@ namespace LudoService
         public void MovePiece(Color PieceColor, int CurrentPosition)
         {
             
-            /*if (nextAction == Action.MovePiece && playersTurn.color == PieceColor && nrofactions >0 )
+          /*  if (nextAction == Action.MovePiece && playersTurn.color == PieceColor && nrofactions >0 )
             { 
                 if(this.board.Squares[CurrentPosition].Pieces.Count>0)
                 {
@@ -353,7 +353,7 @@ namespace LudoService
                                 this.board.MovePiece(this.board.Squares[nextindex].Pieces[0], this.board.Squares.[nextindex]);
                                 this.board.MovePiece(this.board.Squares[CurrentPosition].Pieces[0],this.board.Squares[nextindex]);
 
-                            if(!lastRollWasSix)
+                            if(nrofactions == 0)
                             {
                                 NextPlayersTurn();
                             }
@@ -369,7 +369,7 @@ namespace LudoService
                                 {
                                     this.board.MovePiece(this.board.Squares[CurrentPosition].Pieces[0], this.board.Squares[nextindex]);
 
-                                if(!lastRollWasSix)
+                                if(nrofactions ==0)
                                 {
                                     NextPlayersTurn();
                                 }

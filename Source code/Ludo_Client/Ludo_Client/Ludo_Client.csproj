@@ -32,8 +32,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LudoServer">
+      <HintPath>..\..\..\..\..\..\..\..\..\Documents\Visual Studio 2012\Projects\CSA\LudoServer\LudoServer\bin\Debug\LudoServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -82,6 +87,11 @@
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Service References\GameReff\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -119,12 +129,50 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Service References\GameReff\CGame.wsdl" />
+    <None Include="Service References\GameReff\item.wsdl" />
+    <None Include="Service References\GameReff\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GameReff\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GameReff\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GameReff\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ludo_board.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ludo-table-web.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\GameReff\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\GameReff\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\GameReff\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\GameReff\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\GameReff\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

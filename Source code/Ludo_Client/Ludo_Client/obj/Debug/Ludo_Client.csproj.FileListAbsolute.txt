@@ -13,3 +13,5 @@ C:\Users\Raxiz\Pictures\Books\year 2\block 4\mdw\MDW\Source code\Ludo_Client\Lud
 C:\Users\Raxiz\Pictures\Books\year 2\block 4\mdw\MDW\Source code\Ludo_Client\Ludo_Client\obj\Debug\Ludo_Client.csproj.GenerateResource.Cache
 C:\Users\Raxiz\Pictures\Books\year 2\block 4\mdw\MDW\Source code\Ludo_Client\Ludo_Client\obj\Debug\Ludo_Client.exe
 C:\Users\Raxiz\Pictures\Books\year 2\block 4\mdw\MDW\Source code\Ludo_Client\Ludo_Client\obj\Debug\Ludo_Client.pdb
+C:\Users\Raxiz\Pictures\Books\year 2\block 4\mdw\MDW\Source code\Ludo_Client\Ludo_Client\bin\Debug\LudoServer.dll
+C:\Users\Raxiz\Pictures\Books\year 2\block 4\mdw\MDW\Source code\Ludo_Client\Ludo_Client\bin\Debug\LudoServer.pdb

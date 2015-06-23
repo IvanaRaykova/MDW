@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="LudoServer" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="LudoServer" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="LudoServer/Imports">
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/LudoServer/Service1/?xsd=xsd0" namespace="LudoServer" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/LudoServer/Service1/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/LudoServer/Service1/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/LudoService" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/LudoServer/Service1/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Drawing" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IGame_RollDie_InputMessage">
+    <wsdl:part name="parameters" element="tns:RollDie" />
+  </wsdl:message>
+  <wsdl:message name="IGame_RollDie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RollDieResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGame_NewGame_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewGame" />
+  </wsdl:message>
+  <wsdl:message name="IGame_NewGame_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NewGameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGame_MovePiece_InputMessage">
+    <wsdl:part name="parameters" element="tns:MovePiece" />
+  </wsdl:message>
+  <wsdl:message name="IGame_MovePiece_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MovePieceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGame_AddMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddMessage" />
+  </wsdl:message>
+  <wsdl:message name="IGame_AddMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGame_Subscribe_InputMessage">
+    <wsdl:part name="parameters" element="tns:Subscribe" />
+  </wsdl:message>
+  <wsdl:message name="IGame_Subscribe_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubscribeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGame_Unsubscribe_InputMessage">
+    <wsdl:part name="parameters" element="tns:Unsubscribe" />
+  </wsdl:message>
+  <wsdl:message name="IGame_Unsubscribe_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnsubscribeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGame_OnRollDie_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:OnRollDie" />
+  </wsdl:message>
+  <wsdl:message name="IGame_OnPlayerTurn_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:OnPlayerTurn" />
+  </wsdl:message>
+  <wsdl:message name="IGame_OnMovePiece_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:OnMovePiece" />
+  </wsdl:message>
+  <wsdl:message name="IGame_onMessageAdded_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:onMessageAdded" />
+  </wsdl:message>
+  <wsdl:portType name="IGame">
+    <wsdl:operation name="RollDie">
+      <wsdl:input wsaw:Action="LudoServer/IGame/RollDie" message="tns:IGame_RollDie_InputMessage" />
+      <wsdl:output wsaw:Action="LudoServer/IGame/RollDieResponse" message="tns:IGame_RollDie_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NewGame">
+      <wsdl:input wsaw:Action="LudoServer/IGame/NewGame" message="tns:IGame_NewGame_InputMessage" />
+      <wsdl:output wsaw:Action="LudoServer/IGame/NewGameResponse" message="tns:IGame_NewGame_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MovePiece">
+      <wsdl:input wsaw:Action="LudoServer/IGame/MovePiece" message="tns:IGame_MovePiece_InputMessage" />
+      <wsdl:output wsaw:Action="LudoServer/IGame/MovePieceResponse" message="tns:IGame_MovePiece_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMessage">
+      <wsdl:input wsaw:Action="LudoServer/IGame/AddMessage" message="tns:IGame_AddMessage_InputMessage" />
+      <wsdl:output wsaw:Action="LudoServer/IGame/AddMessageResponse" message="tns:IGame_AddMessage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Subscribe">
+      <wsdl:input wsaw:Action="LudoServer/IGame/Subscribe" message="tns:IGame_Subscribe_InputMessage" />
+      <wsdl:output wsaw:Action="LudoServer/IGame/SubscribeResponse" message="tns:IGame_Subscribe_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Unsubscribe">
+      <wsdl:input wsaw:Action="LudoServer/IGame/Unsubscribe" message="tns:IGame_Unsubscribe_InputMessage" />
+      <wsdl:output wsaw:Action="LudoServer/IGame/UnsubscribeResponse" message="tns:IGame_Unsubscribe_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OnRollDie">
+      <wsdl:output wsaw:Action="LudoServer/IGame/OnRollDie" message="tns:IGame_OnRollDie_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OnPlayerTurn">
+      <wsdl:output wsaw:Action="LudoServer/IGame/OnPlayerTurn" message="tns:IGame_OnPlayerTurn_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OnMovePiece">
+      <wsdl:output wsaw:Action="LudoServer/IGame/OnMovePiece" message="tns:IGame_OnMovePiece_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="onMessageAdded">
+      <wsdl:output wsaw:Action="LudoServer/IGame/onMessageAdded" message="tns:IGame_onMessageAdded_OutputCallbackMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

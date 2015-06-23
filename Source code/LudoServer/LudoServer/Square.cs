@@ -5,7 +5,7 @@ using System.Web;
 using System.Runtime.Serialization;
 using System.Drawing;
 
-namespace LudoServer
+namespace LudoService
 {
     [DataContract]
     public class Square
@@ -57,9 +57,9 @@ namespace LudoServer
             isemptysquare = false;
             pieces.Add(piece);
 
-            if(pieces.Count >1)
+            if (pieces.Count > 1)
             {
-                ismultiple =true;
+                ismultiple = true;
             }
 
         }

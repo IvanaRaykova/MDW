@@ -5,7 +5,7 @@ using System.Web;
 using System.Drawing;
 using System.Runtime.Serialization;
 
-namespace LudoServer
+namespace LudoService
 {
     [DataContract]
     public class Piece

@@ -5,12 +5,14 @@ using System.Web;
 using System.Runtime.Serialization;
 using System.Drawing;
 
-namespace LudoServer
+namespace LudoService
 {
     public class Board
     {
+
         private List<Square> squares = new List<Square>(92);
         private List<Piece> pieces = new List<Piece>();
+
 
 
         public List<Square> Squares
@@ -32,7 +34,8 @@ namespace LudoServer
         public void MovePiece(Piece Piece, Square Square)
         {
             Piece.Square.RemovePiece(Piece);
-
+            Square.AddPiece(Piece);
+            Piece.Square = Square;
         }
 
 
@@ -45,22 +48,22 @@ namespace LudoServer
             {
                 this.squares[i].SetHouse(true);
                 this.squares[i].SetColor(Color.Blue);
-                
+
             }
 
-            for (int i = 80; i<=83; i++)
+            for (int i = 80; i <= 83; i++)
             {
                 this.squares[i].SetHouse(true);
                 this.squares[i].SetColor(Color.Red);
             }
 
-            for (int i = 84; i<= 87; i++)
+            for (int i = 84; i <= 87; i++)
             {
                 this.squares[i].SetHouse(true);
                 this.squares[i].SetColor(Color.Yellow);
             }
 
-            for (int i = 88; i<= 91; i++)
+            for (int i = 88; i <= 91; i++)
             {
                 this.squares[i].SetHouse(true);
                 this.squares[i].SetColor(Color.Green);

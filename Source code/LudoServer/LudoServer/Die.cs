@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Runtime.Serialization;
-namespace LudoServer
+namespace LudoService
 {
 
     [DataContract]
@@ -16,18 +16,18 @@ namespace LudoServer
         public Die()
         {
             randomizer = new Random();
-            
+
         }
 
         public int DieValue
         {
             get { return this.die_value; }
         }
-        
-        [DataMember]
+
+
         public int RollDie()
         {
-            this.die_value = this.randomizer.Next(1,7);
+            this.die_value = this.randomizer.Next(1, 7);
             return die_value;
         }
 
